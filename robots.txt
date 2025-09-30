@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /pages/
+
+# Sitemap location
+Sitemap: https://weeksfromtoday.com/sitemap.xml
+
+# Block common bot paths
+Disallow: /private/
+Disallow: /temp/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?*

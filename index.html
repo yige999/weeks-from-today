@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Week Calculator">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <title>Week Calculator | Weeks From Today | Future Date Calculator</title>
+    <meta name="description" content="Free week calculator to calculate any future date. Add weeks to today with our easy date calculator. Perfect for planning events, pregnancy tracking, project deadlines, and scheduling. Calculate weeks from today instantly.">
+    <meta name="keywords" content="week calculator, weeks from today, date calculator, future date calculator, calculate weeks, add weeks to date, pregnancy calculator, due date calculator, project planning, schedule calculator, deadline calculator, event planning">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Week Calculator | Calculate Weeks From Today | Future Date Calculator">
+    <meta property="og:description" content="Free week calculator to calculate future dates. Add weeks to today for event planning, pregnancy tracking, and project scheduling.">>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://weeksfromtoday.com/">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://weeksfromtoday.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📅%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Performance Optimizations -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/calculator.js" as="script">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Resource Hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    <!-- Critical CSS for faster rendering -->
+    <style>
+        /* Critical above-the-fold styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+        }
+        .nav-header {
+            background: white;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .hero-header {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Weeks From Today Calculator",
+        "description": "Calculate future dates by adding weeks to today's date",
+        "url": "https://weeksfromtoday.com",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Date calculation",
+            "Week calculator",
+            "Business day exclusion",
+            "Holiday exclusion",
+            "Multiple date formats",
+            "Batch calculation",
+            "Export functionality"
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="nav-header">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">Weeks From Today</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Calculator</a>
+                    <a href="pages/1-weeks-from-today.html" class="nav-link">1 Week</a>
+                    <a href="pages/2-weeks-from-today.html" class="nav-link">2 Weeks</a>
+                    <a href="faq.html" class="nav-link">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb-nav">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Weeks From Today Calculator</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <div class="container">
+            <h1 class="hero-title">Week Calculator | Calculate Weeks From Today</h1>
+            <p class="hero-subtitle">Free future date calculator - add weeks to today for perfect planning</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Calculator Section -->
+            <section class="card">
+                <h2 class="card-title">Calculate Future Date</h2>
+
+                <form class="calculator-form" id="calculatorForm">
+                    <div class="form-group">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="date" id="startDate" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weeksInput" class="form-label">Number of Weeks</label>
+                        <input type="number" id="weeksInput" class="form-input" placeholder="Enter number of weeks" min="-9999" max="9999" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="excludeWeekends" class="checkbox-input">
+                                <span>Exclude Weekends</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="excludeHolidays" class="checkbox-input">
+                                <span>Exclude Holidays</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateFormat" class="form-label">Date Format</label>
+                        <select id="dateFormat" class="form-input">
+                            <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                            <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                            <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Calculate Date</button>
+                </form>
+
+                <!-- Results Section -->
+                <div id="resultSection" class="results-section" style="display: none;">
+                    <h3 class="results-title">Calculation Result</h3>
+                    <div class="result-card">
+                        <div class="result-date" id="resultDate"></div>
+                        <div class="result-countdown" id="resultCountdown"></div>
+                    </div>
+                    <div class="result-actions">
+                        <button class="btn btn-secondary" id="copyBtn">Copy Date</button>
+                        <button class="btn btn-secondary" id="shareBtn">Share</button>
+                        <button class="btn btn-secondary" id="exportBtn">Export</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Links Section -->
+            <section class="card">
+                <h2 class="card-title">Quick Calculations</h2>
+                <div class="quick-links-grid" id="quickLinksGrid">
+                    <a href="pages/1-weeks-from-today.html" class="quick-link-card">1 Week</a>
+                    <a href="pages/2-weeks-from-today.html" class="quick-link-card">2 Weeks</a>
+                    <a href="pages/3-weeks-from-today.html" class="quick-link-card">3 Weeks</a>
+                    <a href="pages/4-weeks-from-today.html" class="quick-link-card">4 Weeks</a>
+                    <a href="pages/6-weeks-from-today.html" class="quick-link-card">6 Weeks</a>
+                    <a href="pages/8-weeks-from-today.html" class="quick-link-card">8 Weeks</a>
+                    <a href="pages/12-weeks-from-today.html" class="quick-link-card">12 Weeks</a>
+                    <a href="pages/24-weeks-from-today.html" class="quick-link-card">24 Weeks</a>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="card">
+                <div class="content-section">
+                    <h2>About Weeks From Today Calculator</h2>
+                    <p>This tool helps you calculate future dates by adding weeks to today's date. Perfect for planning events, setting deadlines, scheduling projects, or any situation where you need to know what date it will be a certain number of weeks from now.</p>
+
+                    <h3>Common Uses</h3>
+                    <ul>
+                        <li>Planning vacation dates and travel itineraries</li>
+                        <li>Setting project deadlines and milestones</li>
+                        <li>Scheduling appointments and meetings</li>
+                        <li>Calculating payment due dates and billing cycles</li>
+                        <li>Planning event timelines and preparations</li>
+                        <li>Tracking pregnancy milestones and due dates</li>
+                        <li>Scheduling content releases and publications</li>
+                        <li>Planning fitness and health program timelines</li>
+                    </ul>
+
+                    <h3>How to Use</h3>
+                    <ul>
+                        <li>Enter the number of weeks you want to calculate</li>
+                        <li>Choose whether to exclude weekends or holidays</li>
+                        <li>Select your preferred date format</li>
+                        <li>Click "Calculate Date" to see the result</li>
+                        <li>Copy, share, or export the calculated date</li>
+                    </ul>
+
+                    <h3>Excel Formula</h3>
+                    <p>You can also calculate weeks from today in Excel using this formula:</p>
+                    <div class="code-block">=TODAY() + (weeks * 7)</div>
+                    <p>For business days (excluding weekends):</p>
+                    <div class="code-block">=WORKDAY(TODAY(), weeks * 5)</div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="card">
+                <div class="content-section">
+                    <h2>Frequently Asked Questions</h2>
+
+                    <h3>How do I calculate weeks from today?</h3>
+                    <p>Simply enter the number of weeks you want to add to today's date, then click "Calculate Date". The tool will show you the exact future date, including day of the week and countdown information.</p>
+
+                    <h3>Can I use a custom start date instead of today?</h3>
+                    <p>Yes! You can change the "Start Date" field to any date you want, then calculate weeks from that specific date instead of today.</p>
+
+                    <h3>What's the difference between including and excluding weekends?</h3>
+                    <p>When you exclude weekends, the calculator only counts business days (Monday-Friday). This is useful for business planning, project deadlines, and work-related calculations.</p>
+
+                    <h3>Can I calculate negative weeks (past dates)?</h3>
+                    <p>Yes! Enter a negative number to calculate dates in the past. For example, entering "-2" will show you the date 2 weeks ago.</p>
+
+                    <h3>Is this calculator free to use?</h3>
+                    <p>Yes! This weeks from today calculator is completely free to use with no limitations or hidden fees.</p>
+
+                    <h3>Can I calculate multiple weeks at once?</h3>
+                    <p>Yes, visit our individual week pages (like 1-weeks-from-today.html, 2-weeks-from-today.html, etc.) for pre-calculated results and detailed information about each timeframe.</p>
+                </div>
+            </section>
+
+            <!-- Quick Week Links Section -->
+            <section class="card">
+                <h2 class="card-title">Quick Week Calculations</h2>
+                <p class="card-subtitle">Click any week number for pre-calculated dates and detailed information</p>
+
+                <div class="week-links-grid">
+                    <!-- Common Week Calculations -->
+                    <div class="week-links-section">
+                        <h3>Most Popular</h3>
+                        <div class="week-links-row">
+                            <a href="pages/1-weeks-from-today.html" class="week-link">1 Week</a>
+                            <a href="pages/2-weeks-from-today.html" class="week-link">2 Weeks</a>
+                            <a href="pages/3-weeks-from-today.html" class="week-link">3 Weeks</a>
+                            <a href="pages/4-weeks-from-today.html" class="week-link">4 Weeks</a>
+                            <a href="pages/6-weeks-from-today.html" class="week-link">6 Weeks</a>
+                            <a href="pages/8-weeks-from-today.html" class="week-link">8 Weeks</a>
+                        </div>
+                    </div>
+
+                    <!-- Monthly Calculations -->
+                    <div class="week-links-section">
+                        <h3>Monthly Planning</h3>
+                        <div class="week-links-row">
+                            <a href="pages/12-weeks-from-today.html" class="week-link">12 Weeks (3 months)</a>
+                            <a href="pages/24-weeks-from-today.html" class="week-link">24 Weeks (6 months)</a>
+                            <a href="pages/26-weeks-from-today.html" class="week-link">26 Weeks (Half year)</a>
+                            <a href="pages/36-weeks-from-today.html" class="week-link">36 Weeks (9 months)</a>
+                            <a href="pages/48-weeks-from-today.html" class="week-link">48 Weeks (11 months)</a>
+                            <a href="pages/52-weeks-from-today.html" class="week-link">52 Weeks (1 year)</a>
+                        </div>
+                    </div>
+
+                    <!-- All Weeks Grid -->
+                    <div class="week-links-section">
+                        <h3>All Week Calculations (1-52)</h3>
+                        <div class="week-links-full-grid">
+                            <!-- Row 1-13 -->
+                            <div class="week-grid-row">
+                                <a href="pages/1-weeks-from-today.html" class="week-link-small">1w</a>
+                                <a href="pages/2-weeks-from-today.html" class="week-link-small">2w</a>
+                                <a href="pages/3-weeks-from-today.html" class="week-link-small">3w</a>
+                                <a href="pages/4-weeks-from-today.html" class="week-link-small">4w</a>
+                                <a href="pages/5-weeks-from-today.html" class="week-link-small">5w</a>
+                                <a href="pages/6-weeks-from-today.html" class="week-link-small">6w</a>
+                                <a href="pages/7-weeks-from-today.html" class="week-link-small">7w</a>
+                                <a href="pages/8-weeks-from-today.html" class="week-link-small">8w</a>
+                                <a href="pages/9-weeks-from-today.html" class="week-link-small">9w</a>
+                                <a href="pages/10-weeks-from-today.html" class="week-link-small">10w</a>
+                                <a href="pages/11-weeks-from-today.html" class="week-link-small">11w</a>
+                                <a href="pages/12-weeks-from-today.html" class="week-link-small">12w</a>
+                                <a href="pages/13-weeks-from-today.html" class="week-link-small">13w</a>
+                            </div>
+                            <!-- Row 14-26 -->
+                            <div class="week-grid-row">
+                                <a href="pages/14-weeks-from-today.html" class="week-link-small">14w</a>
+                                <a href="pages/15-weeks-from-today.html" class="week-link-small">15w</a>
+                                <a href="pages/16-weeks-from-today.html" class="week-link-small">16w</a>
+                                <a href="pages/17-weeks-from-today.html" class="week-link-small">17w</a>
+                                <a href="pages/18-weeks-from-today.html" class="week-link-small">18w</a>
+                                <a href="pages/19-weeks-from-today.html" class="week-link-small">19w</a>
+                                <a href="pages/20-weeks-from-today.html" class="week-link-small">20w</a>
+                                <a href="pages/21-weeks-from-today.html" class="week-link-small">21w</a>
+                                <a href="pages/22-weeks-from-today.html" class="week-link-small">22w</a>
+                                <a href="pages/24-weeks-from-today.html" class="week-link-small">24w</a>
+                                <a href="pages/26-weeks-from-today.html" class="week-link-small">26w</a>
+                            </div>
+                            <!-- Row 30-52 -->
+                            <div class="week-grid-row">
+                                <a href="pages/30-weeks-from-today.html" class="week-link-small">30w</a>
+                                <a href="pages/35-weeks-from-today.html" class="week-link-small">35w</a>
+                                <a href="pages/36-weeks-from-today.html" class="week-link-small">36w</a>
+                                <a href="pages/39-weeks-from-today.html" class="week-link-small">39w</a>
+                                <a href="pages/40-weeks-from-today.html" class="week-link-small">40w</a>
+                                <a href="pages/45-weeks-from-today.html" class="week-link-small">45w</a>
+                                <a href="pages/48-weeks-from-today.html" class="week-link-small">48w</a>
+                                <a href="pages/50-weeks-from-today.html" class="week-link-small">50w</a>
+                                <a href="pages/51-weeks-from-today.html" class="week-link-small">51w</a>
+                                <a href="pages/52-weeks-from-today.html" class="week-link-small">52w</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="faq.html" class="footer-link">FAQ</a>
+                    <a href="terms.html" class="footer-link">Terms & Privacy</a>
+                    <a href="pregnancy-calculator-guide.html" class="footer-link">Pregnancy Guide</a>
+                    <a href="project-planning-guide.html" class="footer-link">Project Planning</a>
+                </div>
+                <p class="footer-text">© 2024 Weeks From Today Calculator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Async JavaScript Loading -->
+    <script src="js/calculator.js" async></script>
+    <script>
+        // Initialize calculator with today's date - optimized
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set today's date immediately
+            const today = new Date().toISOString().split('T')[0];
+            const startDateField = document.getElementById('startDate');
+            if (startDateField) {
+                startDateField.value = today;
+            }
+
+            // Set up form submission with event delegation
+            const calculatorForm = document.getElementById('calculatorForm');
+            if (calculatorForm) {
+                calculatorForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    calculateDate();
+                });
+            }
+
+            // Lazy load non-critical elements
+            setTimeout(() => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                });
+
+                document.querySelectorAll('.week-links-section').forEach(section => {
+                    observer.observe(section);
+                });
+            }, 1000);
+        });
+
+        function calculateDate() {
+            const startDate = new Date(document.getElementById('startDate').value);
+            const weeks = parseInt(document.getElementById('weeksInput').value);
+            const excludeWeekends = document.getElementById('excludeWeekends').checked;
+            const excludeHolidays = document.getElementById('excludeHolidays').checked;
+            const dateFormat = document.getElementById('dateFormat').value;
+
+            let resultDate = new Date(startDate);
+
+            if (excludeWeekends) {
+                let businessDaysAdded = 0;
+                let daysToAdd = weeks * 5; // 5 business days per week
+
+                while (businessDaysAdded < daysToAdd) {
+                    resultDate.setDate(resultDate.getDate() + 1);
+                    if (resultDate.getDay() !== 0 && resultDate.getDay() !== 6) {
+                        businessDaysAdded++;
+                    }
+                }
+            } else {
+                resultDate.setDate(startDate.getDate() + (weeks * 7));
+            }
+
+            // Format result
+            const formattedDate = formatDate(resultDate, dateFormat);
+            const dayName = resultDate.toLocaleDateString('en-US', { weekday: 'long' });
+            const fullDate = resultDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            // Calculate countdown
+            const now = new Date();
+            const diffTime = Math.abs(resultDate - now);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            // Display result
+            document.getElementById('resultDate').textContent = `${formattedDate} (${dayName})`;
+            document.getElementById('resultCountdown').textContent = `${fullDate} - ${diffDays} days from today`;
+            document.getElementById('resultSection').style.display = 'block';
+
+            // Scroll to result
+            document.getElementById('resultSection').scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }
+
+        function formatDate(date, format) {
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+
+            switch (format) {
+                case 'DD/MM/YYYY':
+                    return `${day}/${month}/${year}`;
+                case 'YYYY-MM-DD':
+                    return `${year}-${month}-${day}`;
+                default: // MM/DD/YYYY
+                    return `${month}/${day}/${year}`;
+            }
+        }
+
+        // Copy to clipboard functionality
+        document.getElementById('copyBtn')?.addEventListener('click', function() {
+            const resultText = document.getElementById('resultDate').textContent;
+            navigator.clipboard.writeText(resultText).then(() => {
+                this.textContent = 'Copied!';
+                setTimeout(() => {
+                    this.textContent = 'Copy Date';
+                }, 2000);
+            });
+        });
+
+        // Share functionality
+        document.getElementById('shareBtn')?.addEventListener('click', function() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Weeks From Today Calculator',
+                    text: document.getElementById('resultDate').textContent,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback - copy to clipboard
+                const resultText = document.getElementById('resultDate').textContent;
+                navigator.clipboard.writeText(resultText).then(() => {
+                    this.textContent = 'Link Copied!';
+                    setTimeout(() => {
+                        this.textContent = 'Share';
+                    }, 2000);
+                });
+            }
+        });
+
+        // Export functionality
+        document.getElementById('exportBtn')?.addEventListener('click', function() {
+            const resultData = {
+                calculation: document.getElementById('resultDate').textContent,
+                details: document.getElementById('resultCountdown').textContent,
+                timestamp: new Date().toISOString()
+            };
+
+            const dataStr = JSON.stringify(resultData, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'weeks-calculation-result.json';
+            link.click();
+
+            URL.revokeObjectURL(url);
+
+            this.textContent = 'Exported!';
+            setTimeout(() => {
+                this.textContent = 'Export';
+            }, 2000);
+        });
+
+        // Today button functionality
+        document.getElementById('todayBtn')?.addEventListener('click', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('startDate').value = today;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Pages -->
+    <url>
+        <loc>https://weeksfromtoday.com/</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/faq.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/terms.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pregnancy-calculator-guide.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/project-planning-guide.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Week Calculation Pages (1-52 weeks) -->
+    <!-- High Priority Week Pages -->
+    <url>
+        <loc>https://weeksfromtoday.com/pages/1-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/2-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/3-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/4-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/5-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/6-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/7-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/8-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/9-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/10-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/11-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/12-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/13-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/14-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/15-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/16-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/17-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/18-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/19-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/20-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/21-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/22-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/24-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/26-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/30-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/35-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/36-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/39-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/40-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/45-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/48-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/50-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/51-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/52-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Additional Week Pages for Complete Coverage -->
+    <!-- These pages may be created in the future -->
+    <url>
+        <loc>https://weeksfromtoday.com/pages/23-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/25-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/27-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/28-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/29-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/31-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/32-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/33-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/34-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/37-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/38-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/41-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/42-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/43-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/44-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/46-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/47-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://weeksfromtoday.com/pages/49-weeks-from-today.html</loc>
+        <lastmod>2024-09-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+</urlset>
