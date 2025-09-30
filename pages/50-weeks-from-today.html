@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Weeks From Today – Date Calculator</title>
+    <meta name="description" content="Calculate what date it will be 50 weeks from today. Perfect for planning, scheduling, and deadline management. Free and accurate date calculator.">
+    <meta name="keywords" content="50 weeks from today, week calculator, date calculator, planning, schedule calculator, future date calculator, deadline calculator, event planning">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="50 Weeks From Today – Date Calculator">
+    <meta property="og:description" content="Calculate what date it will be 50 weeks from today. Perfect for planning, scheduling, and deadline management.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://weeksfromtoday.com/pages/50-weeks-from-today.html">
+n    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="50
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://weeksfromtoday.com/pages/50-weeks-from-today.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📅%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "50 Weeks From Today Calculator",
+        "description": "Calculate what date it will be 50 weeks from today",
+        "url": "https://weeksfromtoday.com/pages/50-weeks-from-today.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="nav-header">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="nav-logo">Weeks From Today</a>
+                <div class="nav-links">
+                    <a href="../index.html" class="nav-link">Calculator</a>
+                    <a href="1-weeks-from-today.html" class="nav-link">1 Week</a>
+                    <a href="2-weeks-from-today.html" class="nav-link">2 Weeks</a>
+                    <a href="../faq.html" class="nav-link">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <div class="container">
+            <h1 class="hero-title">50 Weeks From Today</h1>
+            <p class="hero-subtitle">Calculate the date 50 weeks from today</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Calculator Section -->
+            <section class="card">
+                <h2 class="card-title">50 Weeks From Today Calculator</h2>
+
+                <form class="calculator-form" id="calculatorForm">
+                    <div class="form-group">
+                        <label for="startDate" class="form-label">Start Date</label>
+                        <input type="date" id="startDate" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="weeksInput" class="form-label">Number of Weeks</label>
+                        <input type="number" id="weeksInput" class="form-input" value="50" min="-9999" max="9999" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="excludeWeekends" class="checkbox-input">
+                                <span>Exclude Weekends</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="excludeHolidays" class="checkbox-input">
+                                <span>Exclude Holidays</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateFormat" class="form-label">Date Format</label>
+                        <select id="dateFormat" class="form-input">
+                            <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                            <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                            <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Calculate Date</button>
+                </form>
+
+                <!-- Results Section -->
+                <div id="resultSection" class="results-section" style="display: none;">
+                    <h3 class="results-title">Calculation Result</h3>
+                    <div class="result-card">
+                        <div class="result-date" id="resultDate"></div>
+                        <div class="result-countdown" id="resultCountdown"></div>
+                    </div>
+                    <div class="result-actions">
+                        <button class="btn btn-secondary" id="copyBtn">Copy Date</button>
+                        <button class="btn btn-secondary" id="shareBtn">Share</button>
+                        <button class="btn btn-secondary" id="exportBtn">Export</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Links Section -->
+            <section class="card">
+                <h2 class="card-title">Related Calculations</h2>
+                <div class="quick-links-grid" id="quickLinksGrid"></div>
+            </section>
+
+            <!-- About Section -->
+            <section class="card">
+                <div class="content-section">
+                    <h2>What is 50 Weeks From Today?</h2>
+                    <p>50 weeks from today is exactly 350 days in the future. This timeframe is commonly used for multi-week planning, project timelines, and setting medium-term deadlines.</p>
+
+                    <h3>Manual Calculation Method</h3>
+                    <p>To calculate 50 weeks from today manually:</p>
+                    <ol>
+                        <li>Start with today's date</li>
+                        <li>Add 350 days to the current date</li>
+                        <li>Move to the same day 50 weeks ahead</li>
+                    </ol>
+
+                    <h3>Excel/Google Sheets Formula</h3>
+                    <p>In Excel or Google Sheets, you can calculate 50 weeks from today using:</p>
+                    <div class="code-block">=TODAY() + 350</div>
+                    <p>For business days only:</p>
+                    <div class="code-block">=WORKDAY(TODAY(), 250)</div>
+
+                    <h3>Common Uses for 50 Weeks Planning</h3>
+                    <ul>
+                        <li>50-week project milestones and deadlines</li>
+                        <li>Setting medium-term goals and objectives</li>
+                        <li>Planning vacation time and travel</li>
+                        <li>Content creation and publishing schedules</li>
+                        <li>Educational course planning and semesters</li>
+                        <li>Business quarter planning and reviews</li>
+                        <li>Marketing campaign timelines</li>
+                    </ul>
+
+                    <h3>Understanding Week Calculations</h3>
+                    <p>When calculating 50 weeks from today, it's important to understand:</p>
+                    <ul>
+                        <li><strong>Calendar Days:</strong> 350 consecutive days including weekends</li>
+                        <li><strong>Business Days:</strong> 250 weekdays (Monday-Friday) when excluding weekends</li>
+                        <li><strong>Holiday Considerations:</strong> Some weeks may contain holidays that affect business calculations</li>
+                    </ul>
+
+                    <h3>Common Questions About 50 Weeks Calculations</h3>
+                    <p><strong>What if I need to exclude weekends?</strong><br>
+                    When you exclude weekends, calculating 50 weeks means adding 250 business days instead of 350 calendar days. This is commonly used for business and work-related planning.</p>
+
+                    <p><strong>How do holidays affect the calculation?</strong><br>
+                    If you choose to exclude holidays and a holiday falls within your 50-week period, the calculator will skip that day and extend the result to compensate for the missed business day.</p>
+
+                    <p><strong>Can I calculate 50 weeks from a past date?</strong><br>
+                    Yes! Simply change the start date to any date you want, and the calculator will show you what date was 50 weeks after that date.</p>
+
+                    <h3>Time Zone Considerations</h3>
+                    <p>Our calculator uses your local time zone settings. If you're coordinating with people in different time zones, make sure to account for any time differences when planning events or deadlines.</p>
+
+                    <h3>50-Week Planning Tips</h3>
+                    <ul>
+                        <li>Use 50-week calculations for medium-term planning</li>
+                        <li>Break down larger goals into 50-week milestones</li>
+                        <li>Set regular review points to assess progress</li>
+                        <li>Schedule buffer time for unexpected events</li>
+                        <li>Consider seasonal factors when planning 50-week timelines</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Navigation Section -->
+            <section class="card">
+                <div class="nav-section">
+                    <a href="../index.html" class="btn btn-secondary">← Back to Calculator</a>
+                    <a href="51-weeks-from-today.html" class="btn btn-secondary">51 Weeks From Today →</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="../index.html" class="footer-link">Home</a>
+                    <a href="../faq.html" class="footer-link">FAQ</a>
+                    <a href="../terms.html" class="footer-link">Terms & Privacy</a>
+                    <a href="../pregnancy-calculator-guide.html" class="footer-link">Pregnancy Guide</a>
+                    <a href="../project-planning-guide.html" class="footer-link">Project Planning</a>
+                </div>
+                <p class="footer-text">© 2024 Weeks From Today Calculator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/calculator.js"></script>
+    <script>
+        // Initialize calculator with today's date
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('startDate').value = today;
+
+            // Set weeks input to 50
+            document.getElementById('weeksInput').value = '50';
+
+            // Set up form submission
+            document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                calculateDate();
+            });
+
+            // Generate related quick links
+            const quickLinksGrid = document.getElementById('quickLinksGrid');
+            const relatedWeeks = [1, 2, 3, 4, 5, 6, 8, 10, 12, 24].filter(w => w !== 50);
+
+            relatedWeeks.forEach(week => {
+                const link = document.createElement('a');
+                link.href = `${week}-weeks-from-today.html`;
+                link.className = 'quick-link-card';
+                link.textContent = `${week} Week${week > 1 ? 's' : ''}`;
+                quickLinksGrid.appendChild(link);
+            });
+        });
+
+        function calculateDate() {
+            const startDate = new Date(document.getElementById('startDate').value);
+            const weeks = parseInt(document.getElementById('weeksInput').value);
+            const excludeWeekends = document.getElementById('excludeWeekends').checked;
+            const excludeHolidays = document.getElementById('excludeHolidays').checked;
+            const dateFormat = document.getElementById('dateFormat').value;
+
+            let resultDate = new Date(startDate);
+
+            if (excludeWeekends) {
+                let businessDaysAdded = 0;
+                let daysToAdd = weeks * 5; // 5 business days per week
+
+                while (businessDaysAdded < daysToAdd) {
+                    resultDate.setDate(resultDate.getDate() + 1);
+                    if (resultDate.getDay() !== 0 && resultDate.getDay() !== 6) {
+                        businessDaysAdded++;
+                    }
+                }
+            } else {
+                resultDate.setDate(startDate.getDate() + (weeks * 7));
+            }
+
+            // Format result
+            const formattedDate = formatDate(resultDate, dateFormat);
+            const dayName = resultDate.toLocaleDateString('en-US', { weekday: 'long' });
+            const fullDate = resultDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            // Calculate countdown
+            const now = new Date();
+            const diffTime = Math.abs(resultDate - now);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            // Display result
+            document.getElementById('resultDate').textContent = `${formattedDate} (${dayName})`;
+            document.getElementById('resultCountdown').textContent = `${fullDate} - ${diffDays} days from today`;
+            document.getElementById('resultSection').style.display = 'block';
+
+            // Scroll to result
+            document.getElementById('resultSection').scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }
+
+        function formatDate(date, format) {
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+
+            switch (format) {
+                case 'DD/MM/YYYY':
+                    return `${day}/${month}/${year}`;
+                case 'YYYY-MM-DD':
+                    return `${year}-${month}-${day}`;
+                default: // MM/DD/YYYY
+                    return `${month}/${day}/${year}`;
+            }
+        }
+
+        // Copy to clipboard functionality
+        document.getElementById('copyBtn')?.addEventListener('click', function() {
+            const resultText = document.getElementById('resultDate').textContent;
+            navigator.clipboard.writeText(resultText).then(() => {
+                this.textContent = 'Copied!';
+                setTimeout(() => {
+                    this.textContent = 'Copy Date';
+                }, 2000);
+            });
+        });
+
+        // Share functionality
+        document.getElementById('shareBtn')?.addEventListener('click', function() {
+            if (navigator.share) {
+                navigator.share({
+                    title: '50 Weeks From Today Calculator',
+                    text: document.getElementById('resultDate').textContent,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback - copy to clipboard
+                const resultText = document.getElementById('resultDate').textContent;
+                navigator.clipboard.writeText(resultText).then(() => {
+                    this.textContent = 'Link Copied!';
+                    setTimeout(() => {
+                        this.textContent = 'Share';
+                    }, 2000);
+                });
+            }
+        });
+
+        // Export functionality
+        document.getElementById('exportBtn')?.addEventListener('click', function() {
+            const resultData = {
+                calculation: document.getElementById('resultDate').textContent,
+                details: document.getElementById('resultCountdown').textContent,
+                timestamp: new Date().toISOString()
+            };
+
+            const dataStr = JSON.stringify(resultData, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = '50-week-calculation-result.json';
+            link.click();
+
+            URL.revokeObjectURL(url);
+
+            this.textContent = 'Exported!';
+            setTimeout(() => {
+                this.textContent = 'Export';
+            }, 2000);
+        });
+
+        // Today button functionality
+        document.getElementById('todayBtn')?.addEventListener('click', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('startDate').value = today;
+        });
+    </script>
+</body>
+</html>
