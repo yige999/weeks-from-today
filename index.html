@@ -140,7 +140,12 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="nav-logo">Weeks From Today</a>
-                <div class="nav-links">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links" id="navLinks">
                     <a href="index.html" class="nav-link">Calculator</a>
                     <a href="pages/1-weeks-from-today.html" class="nav-link">1 Week</a>
                     <a href="pages/2-weeks-from-today.html" class="nav-link">2 Weeks</a>
@@ -414,6 +419,34 @@
             const startDateField = document.getElementById('startDate');
             if (startDateField) {
                 startDateField.value = today;
+            }
+
+            // Mobile Menu Toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            if (mobileMenuToggle && navLinks) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+
+                // Close menu when clicking on a link
+                const links = navLinks.querySelectorAll('.nav-link');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!navLinks.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                        mobileMenuToggle.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    }
+                });
             }
 
             // Set up form submission with event delegation
